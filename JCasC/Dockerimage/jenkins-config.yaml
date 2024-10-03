@@ -1,0 +1,18 @@
+jenkins:
+  systemMessage: "Welcome to Jenkins configured via Code!"
+  securityRealm:
+    local:
+      allowsSignup: false
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  disableRememberMe: true
+  numExecutors: 2
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: true
+
+
+unclassified:
+  location:
+    url: "http://localhost:8080/"
