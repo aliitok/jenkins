@@ -1,0 +1,31 @@
+jenkins:
+  systemMessage: "Welcome to Jenkins configured via Code!"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin_password"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  disableRememberMe: true
+  numExecutors: 2
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: true
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "git-credentials-id"
+              description: "GitHub credentials for cloning repos"
+              username: "aliitok"
+              password: "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"  # This is where you put the GitHub token
+
+unclassified:
+  location:
+    url: "http://localhost:8080/"
