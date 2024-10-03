@@ -15,16 +15,6 @@ jenkins:
     standard:
       excludeClientIPFromCrumb: true
 
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - usernamePassword:
-              scope: GLOBAL
-              id: "git-credentials-id"
-              description: "GitHub credentials for cloning repos"
-              username: "aliitok"
-              password: "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"  # This is where you put the GitHub token
 
 unclassified:
   location:
